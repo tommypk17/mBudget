@@ -1,65 +1,63 @@
-<form [formGroup]="fgIncome">
-
-  <div class="col-12">
-    <div class="grid">
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber mode="currency" currency="USD" id="monthlyGrossIncome" styleClass="w-full" class="w-full" formControlName="gross"></p-inputNumber>
+<div class="flex">
+  <form class="flex" [formGroup]="fgIncome">
+    <div class="flex flex-column">
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber mode="currency" currency="USD" id="monthlyGrossIncome" formControlName="gross"></p-inputNumber>
           <label for="monthlyGrossIncome">Monthly Gross Income</label>
         </p-floatlabel>
+        <button pButton class="ml-2 p-button-text p-button-info" icon="pi pi-save" (click)="save()"></button>
       </div>
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="hourlyGrossIncome" styleClass="w-full" class="w-full" [ngModelOptions]="{standalone: true}" [ngModel]="incomeHourlyGross"></p-inputNumber>
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="hourlyGrossIncome" [ngModelOptions]="{standalone: true}" [ngModel]="incomeHourlyGross"></p-inputNumber>
           <label for="hourlyGrossIncome">Hourly Gross Income</label>
         </p-floatlabel>
       </div>
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="salaryGrossIncome" styleClass="w-full" class="w-full"  [ngModelOptions]="{standalone: true}" [ngModel]="incomeSalaryGross"></p-inputNumber>
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="salaryGrossIncome" [ngModelOptions]="{standalone: true}" [ngModel]="incomeSalaryGross"></p-inputNumber>
           <label for="salaryGrossIncome">Salary Gross Income</label>
         </p-floatlabel>
       </div>
     </div>
-  </div>
-  <div class="col-12">
-    <div class="grid">
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber mode="currency" currency="USD" id="monthlyIncome" styleClass="w-full" class="w-full" formControlName="net"></p-inputNumber>
+    <div class="flex flex-column">
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber mode="currency" currency="USD" id="monthlyIncome" formControlName="net"></p-inputNumber>
           <label for="monthlyIncome">Monthly Net Income</label>
         </p-floatlabel>
+        <button pButton class="ml-2 p-button-text p-button-info" icon="pi pi-save" (click)="save()"></button>
       </div>
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="hourlyNetIncome" styleClass="w-full" class="w-full" [ngModelOptions]="{standalone: true}" [ngModel]="incomeHourlyNet"></p-inputNumber>
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="hourlyNetIncome" [ngModelOptions]="{standalone: true}" [ngModel]="incomeHourlyNet"></p-inputNumber>
           <label for="hourlyNetIncome">Hourly Net Income</label>
         </p-floatlabel>
       </div>
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="salaryNetIncome" styleClass="w-full" class="w-full" [ngModelOptions]="{standalone: true}" [ngModel]="incomeSalaryNet"></p-inputNumber>
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber [disabled]="true" mode="currency" currency="USD" id="salaryNetIncome" [ngModelOptions]="{standalone: true}" [ngModel]="incomeSalaryNet"></p-inputNumber>
           <label for="salaryNetIncome">Salary Net Income</label>
         </p-floatlabel>
       </div>
     </div>
-  </div>
-</form>
-<form [formGroup]="fgParent">
-  <div class="col-12">
-    <div class="grid">
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber mode="currency" currency="USD" id="actualDebt" styleClass="w-full" class="w-full" formControlName="debt"></p-inputNumber>
+  </form>
+  <form class="flex" [formGroup]="fgParent">
+    <div class="flex-column">
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber mode="currency" currency="USD" id="actualDebt" formControlName="debt"></p-inputNumber>
           <label for="actualDebt">Actual Debt</label>
         </p-floatlabel>
+        <button pButton class="ml-2 p-button-text p-button-info" icon="pi pi-save" (click)="save()"></button>
       </div>
-      <div class="col-12 md:col-4">
-        <p-floatlabel class="w-full">
-          <p-inputNumber [disabled]="true" suffix="%" id="debtToIncome" styleClass="w-full" class="w-full" [ngModelOptions]="{standalone: true}" [ngModel]="debtToIncome"></p-inputNumber>
+      <div class="flex p-3">
+        <p-floatlabel>
+          <p-inputNumber [disabled]="true" suffix="%" id="debtToIncome" [ngModelOptions]="{standalone: true}" [ngModel]="debtToIncome"></p-inputNumber>
           <label for="debtToIncome">Debt to Income</label>
         </p-floatlabel>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
