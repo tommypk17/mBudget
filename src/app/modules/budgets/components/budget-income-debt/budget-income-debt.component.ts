@@ -21,13 +21,6 @@ export class BudgetIncomeDebtComponent implements OnInit{
     this.fcDebt = this.fgParent.get('debt') as FormControl
     this.fgIncome.setParent(this.fgDir.form)
     this.fcDebt.setParent(this.fgDir.form)
-
-    this.fgIncome.valueChanges.subscribe(() => {
-      this.save();
-    });
-    this.fcDebt.valueChanges.subscribe(() => {
-      this.save();
-    });
   }
 
   get fgParent(): FormGroup {
